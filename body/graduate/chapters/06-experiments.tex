@@ -1,0 +1,95 @@
+\chapter{实验设计与结果分析}
+\label{chap:experiments}
+
+本章按照装配正确性与性能、独立场映射精度、热--结构响应三个层次组织验证。
+以下内容为实验与结果分析框架，数值结果、图表及结论待实际实验完成后填写。
+
+\section{实验环境与统一设置}
+\subsection{软硬件环境和求解器参数}
+\thesisdraftnote
+
+\subsection{网格、材料、边界条件与参考解}
+\thesisdraftnote
+
+\subsection{计时范围、重复运行与内存统计}
+% TODO：记录硬件、编译选项、线程数、求解容差和单位制；给出重复次数与离散程度。
+% TODO：区分冷启动建索引、缓存复用映射、求解与后处理时间。
+% TODO：进程峰值工作集与映射模块额外内存分开解释，不把历史峰值归因于单个算法。
+\thesisdraftnote
+
+\section{评价指标}
+\subsection{装配正确性、加速比与并行效率}
+% TODO：比较全局矩阵、载荷和求解结果；给出预处理摊销及端到端时间。
+\thesisdraftnote
+
+\subsection{体积加权节点误差与最大误差}
+% TODO：给出节点权重为相邻四面体体积四分之一之和的定义，并说明多分量范数。
+\thesisdraftnote
+
+\subsection{梯度误差与局部高梯度区域误差}
+% TODO：在目标单元重心评价梯度；预先定义局部区域的选择规则。
+\thesisdraftnote
+
+\subsection{虚功偏差与结构响应误差}
+% TODO：定义位移、应力张量及 von Mises 指标，说明参考范数接近零时的处理。
+\thesisdraftnote
+
+\section{并行装配实验}
+\subsection{装配结果一致性验证}
+\thesisdraftnote
+
+\subsection{不同网格规模与并行度下的性能}
+\thesisdraftnote
+
+\subsection{任务粒度、图构建和复用的影响}
+% TODO：以串行装配及可复现的并行装配方法为基线；给出图构建/同步开销。
+\thesisdraftnote
+
+\section{解析节点场的独立映射实验}
+\subsection{常量、仿射与二次场的再现和误差}
+采用解析场直接生成源节点值，以隔离热求解误差。
+可使用常量场 $q=20$、仿射场 $q=20+2x-3y+z$ 和二次场 $q=x^2-y^2$，
+并在不同分量数下检查节点排列与映射一致性。
+% TODO：明确坐标单位或无量纲化方式；不同分量应加入具有不同空间变化的回归样例。
+\subsection{粗细网格、错位与局部加密组合}
+\thesisdraftnote
+
+\subsection{覆盖失败、病态回退与缓存复用}
+% TODO：先检查耦合域是否一致。越界案例记录失败位置，不将外推误差混入方法比较。
+% TODO：Cube 可作为一组数据，同时加入其他几何；二维解析示意不冒充三维程序结果。
+\thesisdraftnote
+
+\section{热--结构耦合实验}
+\subsection{自由热膨胀与同网格基线}
+\thesisdraftnote
+
+\subsection{固定结构网格下的非匹配温度传递}
+\thesisdraftnote
+
+\subsection{温度误差对位移与应力的影响}
+% TODO：候选与基线保持结构网格、材料和边界条件一致，并交代热场参考解的构造。
+% TODO：自由热膨胀约束仅去除刚体模态，避免过约束造成非零热应力。
+\thesisdraftnote
+
+\section{自适应参数与消融实验}
+\subsection{五种映射方法的精度与成本比较}
+% TODO：并列最近邻、P1、局部投影、局部 RBF、自适应方法；统一邻域和计时口径。
+\thesisdraftnote
+
+\subsection{阈值、局部尺度比与邻域规模的影响}
+\thesisdraftnote
+
+\subsection{误差选择与虚功校正的独立贡献}
+% TODO：分别关闭误差选择和物理校正，报告修正前后场误差与虚功偏差。
+% TODO：绘制精度--成本曲线，报告自适应方法没有优势的参数区间和原因。
+\thesisdraftnote
+
+\section{结果讨论与有效性限制}
+% TODO：讨论模型数量、材料界面、求解误差、测量波动和实现选择对结论的影响。
+% TODO：记录受内存或时间预算限制而跳过的案例，不能将其算作验证通过。
+\thesisdraftnote
+
+\section{本章小结}
+% TODO：仅归纳有数据支持的结论；按研究问题逐项回答，并标明适用范围。
+\thesisdraftnote
+

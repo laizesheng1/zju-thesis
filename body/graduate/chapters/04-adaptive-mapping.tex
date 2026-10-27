@@ -1,0 +1,79 @@
+\chapter{面向非匹配网格的自适应节点场映射方法}
+\label{chap:mapping}
+
+本章研究源网格节点场向目标网格节点场的传递。
+方法按节点分量数处理标量或多分量输入，共用空间定位结果；
+热--结构专用的一致性校正依据耦合变量的物理含义单独定义。
+
+\section{节点场映射的问题定义}
+\subsection{源网格、目标网格与节点场布局}
+% TODO：定义两套网格、源节点数、目标节点数和分量数，统一节点优先排列。
+\thesisdraftnote
+
+\subsection{再现性、覆盖条件与误差评价目标}
+% TODO：说明目标点必须位于源网格覆盖域内；越界报告失败，不采用外推。
+\thesisdraftnote
+
+\section{空间索引与源单元定位}
+\subsection{四面体包围盒层次结构}
+\thesisdraftnote
+
+\subsection{重心坐标计算与边界点处理}
+\thesisdraftnote
+
+\subsection{定位缓存与局部邻域查询}
+% TODO：给出 BVH 构建和查询流程，以及几何固定时缓存的有效条件。
+\thesisdraftnote
+
+\section{基础映射方法}
+\subsection{最近邻与 P1 形函数插值}
+\thesisdraftnote
+
+\subsection{局部加权最小二乘投影}
+\thesisdraftnote
+
+\subsection{局部径向基函数与多项式增强}
+\thesisdraftnote
+
+\subsection{病态检测与低阶回退}
+% TODO：给出各方法的方程、邻域规模、矩阵求解和阈值；明确局部投影与全局 L2 投影的区别。
+% TODO：核对 RBF 核函数阶次与多项式增强阶次，不将三次核误写为三次多项式增强。
+\thesisdraftnote
+
+\section{局部误差指示与自适应选择}
+\subsection{局部留一重构误差与分量归一化}
+\thesisdraftnote
+
+\subsection{源网格与目标网格的局部尺度比}
+\thesisdraftnote
+
+\subsection{P1 与局部 RBF 的选择准则}
+% TODO：目标节点尺度由目标相邻单元计算；解释各指标的组合方式与阈值含义。
+% TODO：多分量使用一致的空间选择，说明分量尺度、量纲以及零幅值的处理方式。
+% TODO：区分误差指示量与具有严格上界保证的误差估计，未证明前不宣称后者。
+\thesisdraftnote
+
+\section{面向热--结构耦合的虚功一致性校正}
+\subsection{仿射位移测试模式与等效热载荷}
+\thesisdraftnote
+
+\subsection{约束构造与最小范数温度修正}
+\thesisdraftnote
+
+\subsection{材料分区、约束秩与修正后的场误差}
+% TODO：写出源/目标虚功比较和约束优化问题，说明约束秩亏时的处理。
+% TODO：明确材料与参考温度的对应关系；温度积分一致性不自动等价于热能或虚功守恒。
+\thesisdraftnote
+
+\section{计算复杂度与适用范围}
+\subsection{空间定位、局部重构与多分量复用成本}
+\thesisdraftnote
+
+\subsection{索引缓存、内存占用与映射关系复用}
+% TODO：描述线性四面体节点场的范围；边自由度、其他单元及其他耦合方程作为后续扩展。
+\thesisdraftnote
+
+\section{本章小结}
+% TODO：总结新增选择策略与物理校正的作用假设，由第 6 章实验检验。
+\thesisdraftnote
+

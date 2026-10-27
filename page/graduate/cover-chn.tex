@@ -1,5 +1,9 @@
 \thispagestyle{cover}
-
+\begingroup
+% Explicit vskip values below already separate cover blocks. Avoid adding
+% center/trivlist spacing as well, which otherwise pushes the date onto page 2.
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
 \begin{center}
     \zihao{-4} \songti
     \begin{tabularx}{\textwidth}{l l >{\raggedleft}X l}
@@ -141,3 +145,5 @@
         论文递交日期 & \uline{\SubmitDate}
     \end{tabularx}
 \end{center}
+\clearpage
+\endgroup

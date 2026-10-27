@@ -1,0 +1,54 @@
+\chapter{相关研究与理论基础}
+\label{chap:foundations}
+
+本章围绕并行装配与跨网格场传递梳理相关工作，并统一后续章节使用的网格、自由度和耦合变量记号。
+% TODO：正式写作时核实原文与参考文献信息，再将条目加入 body/ref.bib 并引用。
+
+\section{有限元离散与系统装配}
+\subsection{线性四面体单元与节点自由度}
+% TODO：定义节点、单元连接、形函数、梯度及节点优先的多分量自由度排列。
+\thesisdraftnote
+
+\subsection{单元积分与全局稀疏系统}
+% TODO：给出单元矩阵/向量到全局矩阵/向量的映射关系，区分稀疏结构构建与数值装配。
+\thesisdraftnote
+
+\section{有限元并行装配相关研究}
+\subsection{原子操作、着色与局部归约方法}
+% TODO：按冲突处理机制比较方法；说明比较所用硬件和稀疏存储格式。
+\thesisdraftnote
+
+\subsection{空间分割与任务依赖调度}
+% TODO：梳理空间分割前驱图的已有工作，说明本文研究与既有实现的关系。
+\thesisdraftnote
+
+\section{非匹配网格场传递相关研究}
+\subsection{最近邻与单元形函数插值}
+\thesisdraftnote
+
+\subsection{局部投影与径向基函数映射}
+\thesisdraftnote
+
+\subsection{误差指示、自适应选择与物理一致性}
+% TODO：区分点值再现、离散场积分一致性及耦合方程中功/能量的一致性。
+% TODO：以“方法假设—适用变量—精度性质—计算成本”组织比较，避免仅罗列文献。
+\thesisdraftnote
+
+\section{稳态热--结构耦合模型}
+\subsection{稳态导热与温度边界条件}
+% TODO：给出控制方程、弱形式、导热系数及各类边界条件的单位和符号。
+\thesisdraftnote
+
+\subsection{线性热弹性与等效热载荷}
+% TODO：定义位移、应变、应力、本构矩阵、热膨胀系数及参考温度。
+\thesisdraftnote
+
+\subsection{单向耦合流程与误差来源}
+本文采用热场求解、温度映射和结构响应计算的单向流程。
+后续验证分别考察源场离散误差、跨网格映射误差及目标结构离散误差，
+并通过解析场输入和固定结构网格的对照实验控制这些误差来源。
+
+\section{本章小结}
+% TODO：归纳现有方法留下的具体问题，并分别引出第 3、4 章的研究内容。
+\thesisdraftnote
+

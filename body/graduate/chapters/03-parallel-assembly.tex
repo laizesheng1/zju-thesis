@@ -1,0 +1,48 @@
+\chapter{基于空间分割前驱图的有限元并行装配方法}
+\label{chap:assembly}
+
+本章围绕单元装配任务之间的依赖关系展开，重点描述任务组织、冲突规避与并行执行过程。
+% TODO：本章先保留方法与论证框架，算法细节、改进点和性能结论须依据实际工作补充。
+
+\section{问题定义与设计目标}
+\subsection{单元装配的共享写入关系}
+\thesisdraftnote
+
+\subsection{正确性、并行度与调度成本}
+% TODO：明确依赖关系是基于节点、自由度还是稀疏矩阵写入位置构建。
+\thesisdraftnote
+
+\section{基于空间分割的单元任务组织}
+\subsection{空间分割方式与任务粒度}
+\thesisdraftnote
+
+\subsection{分区边界与跨分区依赖}
+% TODO：补充空间划分示意图、数据结构与不同网格分布下的负载分析。
+\thesisdraftnote
+
+\section{前驱图构建与并行调度}
+\subsection{依赖边构造与无环性}
+\thesisdraftnote
+
+\subsection{就绪任务调度与同步机制}
+\thesisdraftnote
+
+\subsection{稀疏结构与任务图的复用}
+% TODO：给出算法伪代码及冲突覆盖证明，不以运行未崩溃代替正确性论证。
+\thesisdraftnote
+
+\section{方法分析}
+\subsection{装配结果等价性与浮点误差}
+\thesisdraftnote
+
+\subsection{时间复杂度与存储开销}
+\thesisdraftnote
+
+\subsection{适用条件与性能限制}
+% TODO：分别分析预处理和单次装配；说明拓扑变化时需要重建的数据。
+\thesisdraftnote
+
+\section{本章小结}
+% TODO：总结相对已有前驱图方法的实际增量；具体实验数据统一放入第 6 章。
+\thesisdraftnote
+

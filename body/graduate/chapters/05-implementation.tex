@@ -1,0 +1,57 @@
+\chapter{MPIS 中的算法实现与热--结构耦合流程}
+\label{chap:implementation}
+
+本章说明两项研究内容在 MPIS 中的实现位置，以及网格、物理场和计算结果之间的数据关系。
+软件集成用于支撑可重复的实验，不作为独立的算法创新结论。
+
+\section{总体架构与数据流}
+\subsection{网格、物理场、求解器与结果模块}
+\thesisdraftnote
+
+\subsection{系统装配与场间映射的调用关系}
+% TODO：补充模块图与 Heat--Force 数据流图，区分网格几何与节点场值的所有权。
+\thesisdraftnote
+
+\section{并行装配模块的实现}
+\subsection{任务图与稀疏系统的数据组织}
+\thesisdraftnote
+
+\subsection{并行执行、资源管理与阶段计时}
+% TODO：按实际实现说明 CPU/GPU 工作划分、同步位置和数据传输成本。
+\thesisdraftnote
+
+\section{通用节点场映射模块的实现}
+\subsection{只读网格访问与几何缓存生命周期}
+\thesisdraftnote
+
+\subsection{节点优先的多分量数据接口}
+\thesisdraftnote
+
+\subsection{映射诊断、缓存复用与失败处理}
+% TODO：说明直接复用 Mesh 和 Result 的方式，以及必要的接口适配开销。
+% TODO：解释为何物理校正不属于通用映射器；不引入仅供 Cube 使用的网格解析路径。
+\thesisdraftnote
+
+\section{热--结构耦合与结果评价}
+\subsection{双网格配置与单网格兼容流程}
+\thesisdraftnote
+
+\subsection{热场求解、温度映射与结构组装}
+\thesisdraftnote
+
+\subsection{基于已有结果的应力重构与指标累计}
+% TODO：描述应力使用的本构参数、参考温度、单元梯度及结果节点顺序。
+\thesisdraftnote
+
+\section{实验入口与可重复性记录}
+\subsection{解析场验证与批处理配置}
+\thesisdraftnote
+
+\subsection{结果摘要、运行日志与性能记录}
+% TODO：记录模型、配置、程序版本和参数；正文只保留理解实验所需的信息，操作细节放附录。
+\thesisdraftnote
+
+\section{本章小结}
+% TODO：汇总已实现能力与实验所需接口，避免以单个案例运行成功替代算法验证。
+\thesisdraftnote
+
